@@ -77,12 +77,6 @@ const HeroSection = () => {
         
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a 
-            href="#converter"
-            className="px-6 py-3 rounded-md bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:-translate-y-0.5"
-          >
-            Try the Converter
-          </a>
-          <a 
             href="#about"
             className="px-6 py-3 rounded-md bg-secondary text-foreground font-medium transition-all hover:bg-secondary/80 hover:-translate-y-0.5"
           >
