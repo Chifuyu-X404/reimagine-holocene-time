@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { historicalEvents } from '@/utils/dateUtils';
+import { historicalEvents } from '@/utils/historicalEvents';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import { cn } from '@/lib/utils';
