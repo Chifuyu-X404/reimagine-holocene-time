@@ -80,6 +80,56 @@ export const getCurrentGregorianDate = (): { year: number; month: number; day: n
  */
 export const historicalEvents = [
   {
+    year: 1,
+    event: "Beginning of the Holocene Epoch",
+    details: "The Holocene epoch begins, marking the end of the last Ice Age and the start of a warmer climate period, making agriculture and permanent settlements possible."
+  },
+  {
+    year: 500,
+    event: "First permanent human settlements",
+    details: "Early humans begin establishing the first permanent settlements, transitioning from nomadic hunter-gatherer lifestyles."
+  },
+  {
+    year: 1500,
+    event: "Earliest evidence of animal domestication",
+    details: "Dogs are believed to be the first animals domesticated by humans, with evidence dating back to around 8500 BCE."
+  },
+  {
+    year: 2000,
+    event: "Beginnings of agriculture",
+    details: "Humans begin cultivating crops in the Fertile Crescent region, marking a pivotal shift in human civilization."
+  },
+  {
+    year: 3000,
+    event: "First pottery created",
+    details: "Early humans develop pottery for storage and cooking, representing a major technological advancement."
+  },
+  {
+    year: 4500,
+    event: "Invention of the wheel",
+    details: "The wheel is invented in Mesopotamia, revolutionizing transportation and machinery."
+  },
+  {
+    year: 5000,
+    event: "Development of writing",
+    details: "Sumerians develop cuneiform, one of the earliest writing systems, allowing for record-keeping and communication across distances and time."
+  },
+  {
+    year: 6000,
+    event: "Bronze Age begins",
+    details: "Humans learn to make bronze by alloying copper with tin, creating stronger tools and weapons."
+  },
+  {
+    year: 7000,
+    event: "Early urbanization",
+    details: "The first true cities emerge in Mesopotamia with complex social hierarchies, specialized labor, and centralized governance."
+  },  
+  {
+    year: 8500,
+    event: "Iron Age begins",
+    details: "Humans discover iron working, leading to improved tools, weapons, and agricultural implements."
+  },
+  {
     year: 9001,
     event: "Founding of Jericho, one of the world's oldest cities",
     details: "Archaeological evidence suggests Jericho was first settled around 9000 BCE, making it one of humanity's earliest continuously inhabited settlements."
@@ -115,9 +165,19 @@ export const historicalEvents = [
     details: "Muhammad's death in 632 CE marked the beginning of the Islamic calendar and the rapid expansion of Islam throughout the Middle East, North Africa, and beyond."
   },
   {
+    year: 11000,
+    event: "Medieval European Renaissance",
+    details: "A period of intense cultural, artistic, and intellectual flourishing begins in Europe, marking the transition from the Middle Ages to the Modern era."
+  },
+  {
     year: 11492,
     event: "Columbus reaches the Americas",
     details: "Christopher Columbus's voyage in 1492 CE initiated sustained contact between the Eastern and Western hemispheres, dramatically altering the course of global history."
+  },
+  {
+    year: 11760,
+    event: "Beginning of the Industrial Revolution",
+    details: "The transition to new manufacturing processes begins in Great Britain, fundamentally changing how goods were produced and transforming society."
   },
   {
     year: 11776,
@@ -125,9 +185,34 @@ export const historicalEvents = [
     details: "The declaration, adopted on July 4, 1776 CE, announced the independence of the thirteen American colonies from Great Britain."
   },
   {
+    year: 11914,
+    event: "World War I begins",
+    details: "The 'Great War' erupts after the assassination of Archduke Franz Ferdinand, eventually involving most of the world's great powers."
+  },
+  {
+    year: 11939,
+    event: "World War II begins",
+    details: "The deadliest conflict in human history begins with Germany's invasion of Poland, eventually claiming the lives of over 75 million people."
+  },
+  {
     year: 11969,
     event: "First moon landing",
     details: "Neil Armstrong and Buzz Aldrin became the first humans to set foot on the Moon on July 20, 1969 CE, marking a milestone in space exploration."
+  },
+  {
+    year: 11989,
+    event: "Fall of the Berlin Wall",
+    details: "The physical and ideological barrier dividing Berlin and symbolizing the Iron Curtain comes down, signaling the end of the Cold War."
+  },
+  {
+    year: 11991,
+    event: "World Wide Web becomes publicly available",
+    details: "Tim Berners-Lee's creation is opened to the public, beginning the digital transformation of society, commerce, and communication."
+  },
+  {
+    year: 12001,
+    event: "September 11 attacks",
+    details: "Terrorist attacks in the United States kill nearly 3,000 people and dramatically reshape global politics and security."
   },
   {
     year: 12023,

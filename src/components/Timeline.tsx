@@ -1,12 +1,15 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { historicalEvents } from '@/utils/dateUtils';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import { cn } from '@/lib/utils';
+import { Slider } from '@/components/ui/slider';
+import { ZoomIn, ZoomOut } from 'lucide-react';
 
 const Timeline = () => {
   const timelineRef = useRef<HTMLDivElement>(null);
+  const [zoomLevel, setZoomLevel] = useState(100);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,6 +38,13 @@ const Timeline = () => {
     };
   }, []);
 
+  const handleZoomChange = (value: number[]) => {
+    setZoomLevel(value[0]);
+  };
+
+  // Calculate the width of the timeline based on zoom level
+  const timelineWidth = `${Math.max(2000, 2000 * (zoomLevel / 70))}px`;
+
   return (
     <section id="timeline" className="section-container bg-background relative overflow-hidden border-t border-border/10">
       <div className="absolute inset-0 bg-gradient-to-b from-accent/20 to-background/0 pointer-events-none"></div>
@@ -54,9 +64,23 @@ const Timeline = () => {
           </p>
         </div>
         
+        <div className="mb-4 flex items-center justify-center gap-4">
+          <ZoomOut className="text-foreground/70" />
+          <Slider
+            defaultValue={[100]}
+            max={200}
+            min={50}
+            step={10}
+            value={[zoomLevel]}
+            onValueChange={handleZoomChange}
+            className="w-48"
+          />
+          <ZoomIn className="text-foreground/70" />
+        </div>
+        
         <div ref={timelineRef} className="relative">
           <ScrollArea className="w-full">
-            <div className="min-w-[2000px] py-8 px-10 relative">
+            <div className="py-8 px-10 relative" style={{ width: timelineWidth, transition: 'width 0.3s ease-out' }}>
               {/* Timeline line */}
               <div className="timeline-line-horizontal"></div>
               
@@ -67,9 +91,10 @@ const Timeline = () => {
                     <HoverCardTrigger asChild>
                       <div 
                         className={cn(
-                          "timeline-item reveal relative w-40 mx-6 cursor-pointer group",
+                          "timeline-item reveal relative mx-6 cursor-pointer group",
                           index % 2 === 0 ? "mt-12" : "mt-0"
                         )}
+                        style={{ width: `${Math.max(100, 160 * (70 / zoomLevel))}px` }}
                       >
                         <div className="timeline-dot-horizontal group-hover:scale-125 transition-all duration-300 ease-out-expo"></div>
                         <div className="text-center">

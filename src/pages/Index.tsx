@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import DateConverter from '@/components/DateConverter';
 import Timeline from '@/components/Timeline';
 import AboutSection from '@/components/AboutSection';
 import ThisDaySection from '@/components/ThisDaySection';
@@ -43,7 +42,6 @@ const Index = () => {
       </div>
       <Header />
       <HeroSection />
-      <DateConverter />
       <Timeline />
       <AboutSection />
       <ThisDaySection />
