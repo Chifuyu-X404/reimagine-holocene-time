@@ -55,7 +55,7 @@ const Timeline = () => {
         </div>
         
         <div ref={timelineRef} className="relative">
-          <ScrollArea className="w-full" orientation="horizontal">
+          <ScrollArea className="w-full">
             <div className="min-w-[2000px] py-8 px-10 relative">
               {/* Timeline line */}
               <div className="timeline-line-horizontal"></div>
