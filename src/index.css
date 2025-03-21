@@ -7,47 +7,6 @@
 
 @layer base {
   :root {
-    --background: 210 33% 99%;
-    --foreground: 220 40% 12%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 220 40% 12%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 12%;
-
-    --primary: 220 85% 57%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 215 25% 95%;
-    --secondary-foreground: 220 40% 12%;
-
-    --muted: 215 25% 95%;
-    --muted-foreground: 220 10% 40%;
-
-    --accent: 220 85% 97%;
-    --accent-foreground: 220 85% 57%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 215 25% 90%;
-    --input: 215 25% 90%;
-    --ring: 215 85% 57%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
     --background: 224 71% 4%;
     --foreground: 215 20% 92%;
 
@@ -75,6 +34,17 @@
     --border: 220 40% 18%;
     --input: 220 40% 18%;
     --ring: 215 85% 57%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -102,19 +72,31 @@
   }
 
   .glassmorphism {
-    @apply bg-white/80 backdrop-blur-md border border-white/20;
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
   }
   
   .timeline-line {
     @apply absolute left-0 w-px h-full bg-gradient-to-b from-primary/30 via-primary to-primary/30;
   }
   
+  .timeline-line-horizontal {
+    @apply absolute top-1/2 left-0 right-0 h-px w-full bg-gradient-to-r from-primary/30 via-primary to-primary/30 transform -translate-y-1/2;
+  }
+  
   .timeline-dot {
     @apply absolute left-0 w-4 h-4 rounded-full bg-primary -translate-x-1.5 z-10 border-2 border-background transition-all duration-300;
   }
   
+  .timeline-dot-horizontal {
+    @apply absolute left-1/2 top-0 w-4 h-4 rounded-full bg-primary -translate-x-1/2 -translate-y-1/2 z-10 border-2 border-background;
+  }
+  
   .timeline-card {
-    @apply relative ml-8 p-6 bg-white rounded-lg shadow-sm border border-border transition-all duration-300;
+    @apply relative ml-8 p-6 bg-card rounded-lg shadow-sm border border-border transition-all duration-300;
+  }
+  
+  .timeline-card-hover {
+    @apply shadow-lg shadow-primary/10 animate-fade-in;
   }
   
   .timeline-card:hover .timeline-dot {
@@ -130,7 +112,7 @@
   }
   
   .input-bordered {
-    @apply bg-white rounded-md border border-input shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+    @apply bg-card rounded-md border border-input shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
   }
 }
 
